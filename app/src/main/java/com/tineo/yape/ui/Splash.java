@@ -39,5 +39,12 @@ public class Splash extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         context = getContext();
         navController = Navigation.findNavController(view);
+
+        new android.os.Handler().postDelayed(() -> {
+            if (navController.getCurrentDestination() != null &&
+                    navController.getCurrentDestination().getId() == R.id.navigation_splash) {
+                navController.navigate(R.id.action_navigation_splash_to_navigation_login);
+            }
+        }, 3000);
     }
 }

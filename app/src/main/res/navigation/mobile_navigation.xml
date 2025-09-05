@@ -2,4 +2,42 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation" />
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_splash">
+    <fragment
+        android:id="@+id/navigation_splash"
+        android:name="com.tineo.yape.ui.Splash"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_navigation_splash_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.tineo.yape.ui.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.tineo.yape.ui.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_yapear"
+            app:destination="@id/navigation_yapear" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_yapear"
+        android:name="com.tineo.yape.ui.Yapear"
+        android:label="fragment_yapear"
+        tools:layout="@layout/fragment_yapear" >
+        <action
+            android:id="@+id/action_navigation_yapear_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>
