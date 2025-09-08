@@ -12,9 +12,12 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.tineo.yape.R;
 import com.tineo.yape.databinding.FragmentLoginBinding;
+
+import java.util.Random;
 
 public class Login extends Fragment {
     FragmentLoginBinding binding;
@@ -39,5 +42,19 @@ public class Login extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         context = getContext();
         navController = Navigation.findNavController(view);
+
+        // Contador solo para el botón 1
+        final int[] contadorBtnOne = {0};
+        Button btnOne = view.findViewById(R.id.btnOne);
+
+        if (btnOne != null) {
+            btnOne.setOnClickListener(v -> {
+                contadorBtnOne[0]++;
+
+                if (contadorBtnOne[0] == 4) {
+                    navController.navigate(R.id.navigation_home);
+                }
+            });
+        }
     }
 }
