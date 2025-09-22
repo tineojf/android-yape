@@ -39,5 +39,12 @@ public class Yapear extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         context = getContext();
         navController = Navigation.findNavController(view);
+
+        binding.Contacto1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.navigation_yapearA);
+            }
+        });
     }
 }
