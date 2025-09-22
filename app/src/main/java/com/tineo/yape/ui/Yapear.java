@@ -43,7 +43,7 @@ public class Yapear extends Fragment {
         binding.Contacto1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.navigation_yapearA);
+                navController.navigate(R.id.navigation_yapear_a);
             }
         });
     }

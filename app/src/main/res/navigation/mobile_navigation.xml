@@ -30,6 +30,9 @@
         <action
             android:id="@+id/action_navigation_home_to_navigation_yapear"
             app:destination="@id/navigation_yapear" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_yapear_a"
+            app:destination="@id/navigation_yapear_a" />
     </fragment>
     <fragment
         android:id="@+id/navigation_yapear"
@@ -38,6 +41,15 @@
         tools:layout="@layout/fragment_yapear" >
         <action
             android:id="@+id/action_navigation_yapear_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_yapear_a"
+        android:name="com.tineo.yape.ui.YapearA"
+        android:label="fragment_yapear_a"
+        tools:layout="@layout/fragment_yapear_a" >
+        <action
+            android:id="@+id/action_navigation_yapear_a_to_navigation_home"
             app:destination="@id/navigation_home" />
     </fragment>
 </navigation>
