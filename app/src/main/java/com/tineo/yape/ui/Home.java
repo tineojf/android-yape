@@ -12,6 +12,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.tineo.yape.R;
 import com.tineo.yape.databinding.FragmentHomeBinding;
@@ -39,5 +40,10 @@ public class Home extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         context = getContext();
         navController = Navigation.findNavController(view);
+
+        Button btnYapear= view.findViewById(R.id.btnYapear);
+        btnYapear.setOnClickListener(v -> {
+            navController.navigate(R.id.navigation_yapear);
+        });
     }
 }
